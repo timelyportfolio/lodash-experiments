@@ -71,12 +71,12 @@ colnames(libraryData) <- c("library","dataformat","jscall")
 
 require(rCharts)
 writeLines(to_json(iris, "columns"),"iris.json")
-writeLines(to_json(data.frame(HairEyeColor, "columns")),"haireye.json")
+writeLines(to_json(data.frame(HairEyeColor), "columns"),"haireye.json")
 
 
 
 # lodash js to get in proper format assuming method #1 json
 # records
-
+_.map(_.unzip(data),function(d){return _.zipObject(d3.keys(data),d)})
 # values
 _.unzip(data)

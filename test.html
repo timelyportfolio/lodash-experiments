@@ -10,8 +10,15 @@
     <body>
         <script>
           d3.json("iris.json", function (error, data) {
-            debugger;
-          })
+            console.log(data);
+            console.log(_.map(_.unzip(data),function(d){return _.zipObject(d3.keys(data),d)}));
+            console.log(_.unzip(data));
+          });
+          d3.json("haireye.json", function (error, data) {
+            console.log(data);
+            console.log(_.map(_.unzip(data),function(d){return _.zipObject(d3.keys(data),d)}));
+            console.log(_.unzip(data));
+          });
         </script>
     </body>
 </html>
