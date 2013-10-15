@@ -9,7 +9,7 @@ rCharts::to_json(simpleData, "records")
 #3. Array of row arrays        "values"
 rCharts::to_json(simpleData, "values")
 
-libraryData = data.frame(list(
+libraryData = data.frame(rbind(
   c("dataTables","values","$('#' + chartParams.dom).dataTable(
       chartParams.table
     )"),
@@ -59,7 +59,7 @@ libraryData = data.frame(list(
       ]
     }
   ]',"myChart = new xChart(chartType, data, '#chart1b4828a41187')")
-))
+),stringsAsFactors = FALSE)
 colnames(libraryData) <- c("library","dataformat","jscall")
 
 
@@ -76,7 +76,9 @@ writeLines(to_json(data.frame(HairEyeColor), "columns"),"haireye.json")
 
 
 # lodash js to get in proper format assuming method #1 json
-# records
+# records with only lodash
+_.map(_.unzip(data),function(d){return _.zipObject(_.keys(data),d)})
+# records using blend of d3 and lodash
 _.map(_.unzip(data),function(d){return _.zipObject(d3.keys(data),d)})
 # values
 _.unzip(data)
