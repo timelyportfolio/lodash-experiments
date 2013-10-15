@@ -1,0 +1,42 @@
+"","library","dataformat","jscall","NA","NA","NA","NA","NA","NA","NA"
+"1","dataTables","dimple","highcharts","micropolar","morris","nvd3","polycharts","rickshaw","uvCharts","xCharts"
+"2","values","records","values","values","records","records","columns","blend series:[
+                        {data:[{x:,y:},{x:,y:}], name: 'seriesname',info:{}}]","nested records","blended ""main"": [
+    {
+      ""className"": "".pizza"",
+      ""data"": [
+        {
+          ""x"": ""Pepperoni"",
+          ""y"": 12
+        },
+        {
+          ""x"": ""Cheese"",
+          ""y"": 8
+        }
+      ]
+    }
+  ]"
+"3","$('#' + chartParams.dom).dataTable(
+      chartParams.table
+    )","var myChart = new dimple.chart(svg, data);","""name"": ""None"",
+""type"": ""scatter"",
+""marker"": {
+ ""radius"":      3 
+} 
+},
+{
+ ""data"": [
+ [
+    152,
+90 
+],
+[","micropolar.factory[chartParamschart247865c43e28.type](
+    chartParamschart247865c43e28
+  )","new Morris[chartType](chartParams) with data as chartParams.data","d3.select(""#"" + opts.id)
+    .append(""svg"")
+    .datum(data) d3.nest translate for most types"""," _.each(chartParams.layers, function(el){
+        el.data = polyjs.data(el.data)
+    })","var graphchart1b4868d955e9 = new Rickshaw.Graph(chartParams);","var chartchart1b486c9c54f6 = uv.chart(chartParamschart1b486c9c54f6.type, 
+    graphdefchart1b486c9c54f6,
+    configchart1b486c9c54f6
+  );","myChart = new xChart(chartType, data, '#chart1b4828a41187')"
