@@ -1,7 +1,38 @@
-"","library","dataformat","jscall","NA.","NA..1","NA..2","NA..3","NA..4","NA..5","NA..6"
-"1","dataTables","dimple","highcharts","micropolar","morris","nvd3","polycharts","rickshaw","uvCharts","xCharts"
-"2","values","records","values","values","records","records","columns","blend series:[
-                        {data:[{x:,y:},{x:,y:}], name: 'seriesname',info:{}}]","nested records","blended ""main"": [
+"","library","dataformat","jscall"
+"1","dataTables","values","$('#' + chartParams.dom).dataTable(
+      chartParams.table
+    )"
+"2","dimple","records","var myChart = new dimple.chart(svg, data);"
+"3","highcharts","values","""name"": ""None"",
+""type"": ""scatter"",
+""marker"": {
+ ""radius"":      3 
+} 
+},
+{
+ ""data"": [
+ [
+    152,
+90 
+],
+["
+"4","micropolar","values","micropolar.factory[chartParamschart247865c43e28.type](
+    chartParamschart247865c43e28
+  )"
+"5","morris","records","new Morris[chartType](chartParams) with data as chartParams.data"
+"6","nvd3","records","d3.select(""#"" + opts.id)
+    .append(""svg"")
+    .datum(data) d3.nest translate for most types"""
+"7","polycharts","columns"," _.each(chartParams.layers, function(el){
+        el.data = polyjs.data(el.data)
+    })"
+"8","rickshaw","blend series:[
+                        {data:[{x:,y:},{x:,y:}], name: 'seriesname',info:{}}]","var graphchart1b4868d955e9 = new Rickshaw.Graph(chartParams);"
+"9","uvCharts","nested records","var chartchart1b486c9c54f6 = uv.chart(chartParamschart1b486c9c54f6.type, 
+    graphdefchart1b486c9c54f6,
+    configchart1b486c9c54f6
+  );"
+"10","xCharts","blended ""main"": [
     {
       ""className"": "".pizza"",
       ""data"": [
@@ -15,28 +46,4 @@
         }
       ]
     }
-  ]"
-"3","$('#' + chartParams.dom).dataTable(
-      chartParams.table
-    )","var myChart = new dimple.chart(svg, data);","""name"": ""None"",
-""type"": ""scatter"",
-""marker"": {
- ""radius"":      3 
-} 
-},
-{
- ""data"": [
- [
-    152,
-90 
-],
-[","micropolar.factory[chartParamschart247865c43e28.type](
-    chartParamschart247865c43e28
-  )","new Morris[chartType](chartParams) with data as chartParams.data","d3.select(""#"" + opts.id)
-    .append(""svg"")
-    .datum(data) d3.nest translate for most types"""," _.each(chartParams.layers, function(el){
-        el.data = polyjs.data(el.data)
-    })","var graphchart1b4868d955e9 = new Rickshaw.Graph(chartParams);","var chartchart1b486c9c54f6 = uv.chart(chartParamschart1b486c9c54f6.type, 
-    graphdefchart1b486c9c54f6,
-    configchart1b486c9c54f6
-  );","myChart = new xChart(chartType, data, '#chart1b4828a41187')"
+  ]","myChart = new xChart(chartType, data, '#chart1b4828a41187')"
